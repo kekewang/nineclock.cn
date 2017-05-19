@@ -1,4 +1,5 @@
 #include('./header.html',{title: article.title, keywords: article.tags})
+<link rel="stylesheet" href="${theme_url('/static/css/share.min.css')}">
 <article class="main-content page-page" itemscope itemtype="http://schema.org/Article">
     <div class="post-header">
         <h1 class="post-title" itemprop="name headline">
@@ -13,6 +14,7 @@
     <div id="post-content" class="post-content" itemprop="articleBody">
         <p class="post-tags">${show_tags()}</p>
         ${show_content()}
+        <div class="social-share" data-disabled="diandian,google">分享到：</div>
         <p class="post-info">
             本文由 <a href="">${theme_option('author') ?! 'nineclock'}</a> 创作，采用 <a
                 href="https://creativecommons.org/licenses/by/4.0/" target="_blank"
@@ -21,6 +23,7 @@
         </p>
     </div>
 </article>
+
 <div id="post-bottom-bar" class="post-bottom-bar">
     <div class="bottom-bar-inner">
         <div class="bottom-bar-items social-share left">
@@ -46,5 +49,13 @@
         </div>
     </div>
 </div>
+<script src="${theme_url('/static/js/social-share.js')}"></script>
+<script src="${theme_url('/static/js/qrcode.js')}"></script>
+<script>
+    socialShare('#share-1');
+    socialShare('#share-2', {sites: ['qzone', 'qq', 'weibo','wechat']});
+    socialShare('#share-3');
+    socialShare('#share-4');
+</script>
 #include('./comments.html')
 #include('./footer.html')
