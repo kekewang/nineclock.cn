@@ -148,7 +148,7 @@
                     <descriptors>
                         <descriptor>assembly.xml</descriptor>
                     </descriptors>
-                    <outputDirectory>${project.build.directory}/dist/</outputDirectory>
+                    <outputDirectory>${project.basedir}/dist/</outputDirectory>
                 </configuration>
             </plugin>
             <plugin>
