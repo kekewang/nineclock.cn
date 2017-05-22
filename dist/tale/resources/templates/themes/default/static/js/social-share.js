@@ -72,8 +72,8 @@
     };
 
     var templates = {
-        qzone: (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad)
-            ?'https://h5.qzone.qq.com/q/qzs/open/connect/widget/mobile/qzshare/index.html?url={{URL}}&title={{TITLE}}&desc={{DESCRIPTION}}&summary={{SUMMARY}}&site={{SOURCE}}'
+        qzone: (browser.versions.mobile)
+            ?'https://h5.qzone.qq.com/q/qzs/open/connect/widget/mobile/qzshare/index.html?url={{URL}}&title={{TITLE}}&desc={{DESCRIPTION}}&summary={{SUMMARY}}&site={{SOURCE}}&imageUrl={{IMAGE}}'
             :'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={{URL}}&title={{TITLE}}&desc={{DESCRIPTION}}&summary={{SUMMARY}}&site={{SOURCE}}',
         qq: 'http://connect.qq.com/widget/shareqq/index.html?url={{URL}}&title={{TITLE}}&source={{SOURCE}}&desc={{DESCRIPTION}}&pics={{IMAGE}}',
         tencent: 'http://share.v.t.qq.com/index.php?c=share&a=index&title={{TITLE}}&url={{URL}}&pic={{IMAGE}}',
@@ -95,7 +95,6 @@
      * @param  {Object} options
      */
     window.socialShare = function (elem, options) {
-        console.log(browser);
         elem = typeof elem === 'string' ? querySelectorAlls(elem) : elem;
 
         if (elem.length === undefined) {
