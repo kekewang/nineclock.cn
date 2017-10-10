@@ -1,4 +1,6 @@
 #!/bin/bash
+touch tale.out
+
 workspace=/data/webapps
 svn_tmp=$workspace/tmp
 echo "Clean the svn tmp directory..."
