@@ -73,3 +73,5 @@ CREATE TABLE t_users (uid INTEGER PRIMARY KEY UNIQUE NOT NULL, username VARCHAR 
 
 COMMIT TRANSACTION;
 PRAGMA foreign_keys = on;
+
+SELECT * from t_logs;
