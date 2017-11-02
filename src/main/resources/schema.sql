@@ -77,3 +77,6 @@ PRAGMA foreign_keys = on;
 SELECT * from t_logs;
 
 SELECT * from t_contents;
+
+SELECT * from t_users;
+
