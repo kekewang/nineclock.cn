@@ -22,16 +22,16 @@ public class BaseTaleTestCase {
     }
 
     protected void start() {
-        Blade.me().listen(10086).start(InstallController.class).startup(1);
+        Blade.me().listen(10086).start(InstallController.class).start();
     }
 
     protected void start(Blade blade) {
-        blade.listen(10086).start(InstallController.class).startup(1);
+        blade.listen(10086).start(InstallController.class).start();
     }
 
     @After
     public void after() {
-        //app.stop();
-        //app.await();
+        app.stop();
+        app.await();
     }
 }
