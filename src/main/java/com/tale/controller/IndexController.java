@@ -258,6 +258,19 @@ public class IndexController extends BaseController {
     }
 
     /**
+     * 归档页
+     *
+     * @return
+     */
+    @Route(values = {"java", "java.html"}, method = HttpMethod.GET)
+    public String javas(Request request) {
+        List<Archive> archives = siteService.getArchives();
+        request.attribute("archives", archives);
+        request.attribute("is_archive", true);
+        return this.render("archives");
+    }
+
+    /**
      * 友链页
      *
      * @return
