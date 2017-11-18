@@ -15,24 +15,15 @@
         <blade-jdbc.version>0.1.6-beta</blade-jdbc.version>
         <blade-tpl.verion>0.0.9</blade-tpl.verion>
         <blade-embed-jetty.version>0.1.3</blade-embed-jetty.version>
-        <junit.version>4.12</junit.version>
-        <blade-mvc.version>2.0.5-BETA1</blade-mvc.version>
     </properties>
 
     <dependencies>
-        <!-- mvc dependency -->
+        <!-- mvc -->
         <dependency>
             <groupId>com.bladejava</groupId>
-            <artifactId>blade-mvc</artifactId>
-            <version>${blade-mvc.version}</version>
+            <artifactId>blade-core</artifactId>
+            <version>${blade.version}</version>
         </dependency>
-
-        <!-- mvc -->
-        <!--<dependency>-->
-            <!--<groupId>com.bladejava</groupId>-->
-            <!--<artifactId>blade-core</artifactId>-->
-            <!--<version>${blade.version}</version>-->
-        <!--</dependency>-->
 
         <!-- 数据库操作 -->
         <dependency>
